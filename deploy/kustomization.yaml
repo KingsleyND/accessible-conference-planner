@@ -8,6 +8,10 @@ resources:
   - deployment.yaml
   - service.yaml
   - httproute.yaml
+configMapGenerator:
+  - name: conference-code
+    files:
+      - server.py
 images:
   - name: app
     newName: ghcr.io/OWNER/REPO
